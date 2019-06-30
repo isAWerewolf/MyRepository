@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+<h5>A cumulative scoring period of one quarter and a full score of 100.
+    <small class="float-right">
+        <a href="#bottom" title="Go Bottom"><small>Go Bottom</small></a>
+    </small>
+</h5>
+<div class="list-group">
+    <a class="list-group-item list-group-item-info list-group-item-action flex-column">
+        <div class="text-center justify-content-between">
+            <h5 ><strong>Score of Riding Behavior</strong></h5>
+        </div>
+        <p class="mb-1 text-center"><strong>{{newestData.score}}</strong></p>
+    </a>
+    <a class="list-group-item {% if newestData.ni_num > 0 %} list-group-item-danger {% else %} list-group-item-success {% endif %} list-group-item-action flex-column" name="itemColor">
+        <div class="text-center justify-content-between">
+            <h5>Retrograde</h5>
+        </div>
+        <p class="mb-1 text-center">{{ newestData.ni_num }} time(s)</p>
+    </a>
+    <a class="list-group-item {% if newestData.chuang_num > 0 %} list-group-item-danger {% else %} list-group-item-success {% endif %} list-group-item-action flex-column">
+        <div class="text-center justify-content-between">
+            <h5>Run A Red Light</h5>
+        </div>
+        <p class="mb-1 text-center">{{ newestData.chuang_num }} time(s)</p>
+    </a>
+    <a class="list-group-item {% if newestData.peng_num > 0 %} list-group-item-danger {% else %} list-group-item-success {% endif %} list-group-item-action flex-column">
+        <div class="text-center justify-content-between">
+            <h5>Collision</h5>
+        </div>
+        <p class="mb-1 text-center">{{ newestData.peng_num }} time(s)</p>
+    </a>
+    <a class="list-group-item {% if newestData.die_num > 0 %} list-group-item-danger {% else %} list-group-item-success {% endif %} list-group-item-action flex-column">
+        <div class="text-center justify-content-between">
+            <h5>Fall</h5>
+        </div>
+        <p class="mb-1 text-center">{{ newestData.die_num }} time(s)</p>
+    </a>
+    <a class="list-group-item {% if newestData.chao_num > 0 %} list-group-item-danger {% else %} list-group-item-success {% endif %} list-group-item-action flex-column">
+        <div class="text-center justify-content-between">
+            <h5>Speeding</h5>
+        </div>
+        <p class="mb-1 text-center">{{ newestData.chao_num }} time(s)</p>
+    </a>
+    <a class="list-group-item {% if newestData.jia_num > 0 %} list-group-item-danger {% else %} list-group-item-success {% endif %} list-group-item-action flex-column">
+        <div class="text-center justify-content-between">
+            <h5>Rapid Acceleration</h5>
+        </div>
+        <p class="mb-1 text-center">{{ newestData.jia_num }} time(s)</p>
+    </a>
+    <a class="list-group-item {% if newestData.jian_num > 0 %} list-group-item-danger {% else %} list-group-item-success {% endif %} list-group-item-action flex-column">
+        <div class="text-center justify-content-between">
+            <h5>Rapid Deceleration</h5>
+        </div>
+        <p class="mb-1 text-center">{{ newestData.jian_num }} time(s)</p>
+    </a>
+    <a class="list-group-item {% if newestData.zhuan_num > 0 %} list-group-item-danger {% else %} list-group-item-success {% endif %} list-group-item-action flex-column">
+        <div class="text-center justify-content-between">
+            <h5>Sharp Turn</h5>
+        </div>
+        <p class="mb-1 text-center">{{ newestData.zhuan_num }} time(s)</p>
+    </a>
+</div>
+
+{% endblock%}
