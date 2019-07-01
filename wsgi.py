@@ -1,3 +1,3 @@
-from WebExhibition import create_app
+from WebExhibition import app
 
-app = create_app()
+app.run()
