@@ -12,14 +12,6 @@ db = SQLAlchemy(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 
-def create_app():
-    app = Flask('WebExhibition')
-    app.config.from_pyfile('settings.py')
-
-    db = SQLAlchemy(app)
-    bootstrap = Bootstrap(app)
-    moment = Moment(app)
-    return app
 
 from WebExhibition import views
 
